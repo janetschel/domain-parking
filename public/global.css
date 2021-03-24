@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');
+
+body {
+	background: rgb(87,48,99);
+	background: linear-gradient(90deg, rgba(87,48,99,1) 0%, rgba(98,44,115,1) 35%, rgba(155,68,182,1) 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: white;
+	transition: transform 1s ease-in, opacity 1s ease-in !important;
+	transform-origin: bottom;
+}
+
+div.container {
+	width: 100%;
+	text-align: center;
+}
+
+div.container > div.text-content {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+div.container > div.text-content > h1 {
+	display: inline-block;
+	font-size: 48px;
+}
+
+div.container > div.text-content > h1.error-message {
+	display: block;
+	font-size: 128px;
+	margin-bottom: 30px;
+}
+
+div.container > div.text-content > h1.question {
+	margin-right: 5px;
+}
+
+h1.domain {
+	color: rgba(255, 255, 255, 1);
+}
+
+h1.domain:hover {
+	text-decoration: line-through;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+div.container > div.nothing-to-see {
+	width: 100%;
+	height: 100px;
+
+	margin-top: 20px;
+}
+
+div.container > div.nothing-to-see > h2 {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+div.container > div.nothing-to-see > h3 {
+	margin-bottom: 5px;
+}
+
+div.footer-wrapper {
+	bottom: 0;
+	margin-top: 50px;
+	text-align: center;
+}
+
+div.footer-wrapper > span.footer {
+	display: inline-block;
+}
+
+div.footer-wrapper > span.footer, div.footer-wrapper > span.footer > a {
+	color: rgba(255, 255, 255, 0.5)
+}
+
+.scaled {
+	transform: scale(10);
+	transform: translateY(-70%);
+	opacity: 0;
+}
+
+div.game-container {
+	position: absolute;
+	width: 100vw;
+	height: 50px;
+	margin-top: 75px;
+	bottom: 0;
+	font-size: 20px;
+}
+
+div.game-container > span.carret {
+	position: absolute;
+	margin: 10px;
+	margin-bottom: 11px;
+	bottom: 0;
+	font-family: 'Source Code Pro', monospace !important;
+	color: rgb(13, 208, 13);
+}
+
+div.game-container > input {
+	position: absolute;
+	margin-left: 30px;
+	bottom: 0;
+	font-family: 'Source Code Pro', monospace !important;
+	background-color: transparent;
+	height: 50px;
+	width: 500px;
+	border: none;
+	font-size: 20px;
+}
+
+div.game-container > div.history {
+	position: relative;
+	bottom: 50px;
+	width: calc(100% - 10px);
+	height: 50px;
+	overflow: scroll;
+	margin-left: 10px;
+}
+
+div.game-container > div.history > span.code { 
+	font-family: 'Source Code Pro', monospace !important;
+	color: lightgray
+}
+
+div.game-container > div.history > span.response { 
+	font-family: 'Source Code Pro', monospace !important;
+	color: white
+}
+
+.invisible {
+	display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: none;
+ box-shadow: none;
+ outline: none;
+}
+
+input:hover, 
+input:focus, 
+input:active
+{
+ outline: none;
+}
