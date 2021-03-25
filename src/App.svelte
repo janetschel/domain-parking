@@ -4,14 +4,11 @@
 	import Prompt from "./modules/Prompt.svelte";
 
 	const domains = [
-		"janetschel.de",
 		"janetschel.com",
 		"etschel.xyz",
 		"zander.red",
 		"zander.plus",
 		"zander.fyi",
-		"testapps.de",
-		"verbindungs-optimierer.de",
 	]
 </script>
 
