@@ -1,15 +1,18 @@
 <script>
-	import Util from './utils/utils.js';
+    import Util from './utils/utils.js';
+    import moment from 'moment';
 
     let isPlaying = false;
     let input;
 
     const knownCommands = [
-        "exit",
-        "reload",
-        "help",
+        "about",
         "clear",
-        "visit"
+        "contact",
+        "exit",
+        "help",
+        "reload",
+        "visit",
     ];
 
     document.body.onkeydown = () => {
@@ -17,7 +20,7 @@
             if (!isPlaying && event.code === 'Space') 
                 startGame();
         })
-    }
+    };
 
     const startGame = async () => {
         zoomIn();
@@ -28,7 +31,7 @@
         carret.classList.remove("invisible");
         input.classList.remove("invisible");
         input.focus();
-    }
+    };
 
     const zoomIn = () => 
         document.querySelectorAll("h1, h2, h3, span, a").forEach(element => {
@@ -41,16 +44,15 @@
     const keyDownInput = (event) => 
         event.key == "Enter" ? parseCommand() : null;
 
-    const parseCommand = async () => {
+    const parseCommand = () => {
         const command = input.value;
-        const response = evaluateCommand(command);
+        const response = evaluateCommand(command.toLowerCase());
 
         display("&gt; " + command, false);
         input.value = "";
 
-        await Util.sleep(50);
         display(response, true);
-    }
+    };
 
     const display = (text, isResponse) => {
         const history = document.getElementById("history");
@@ -61,7 +63,7 @@
             history.innerHTML += "<span class=\"code\">" + text + "</span>" + "<br>";
         }
         history.scrollTop = history.scrollHeight;
-    }
+    };
 
     const evaluateCommand = (command) => {
         if (knownCommands.includes(command)) {
@@ -78,6 +80,10 @@
                     const history = document.getElementById("history");
                     history.innerHTML = "";
                     return "";
+                case "about":
+                    return "Hi! I'm Jan, "+ getAge() +" years old. I study computer science at <a target=\"_blank\" href=\"https://www.th-nuernberg.de/en/\">TH Nuremberg</a> (Bavaria, Germany) and work for a German insurance company. I love to freelance in my freetime!";
+                case "contact":
+                    return "Contact me at <a href=\"mailto:email@janetschel.de\">mailto:email@janetschel.de</a> or at my website"
             }
         } else {
             if (command.includes("visit")) {
@@ -93,15 +99,23 @@
             
             return "Unknown command: " + command + ". Try help for help";
         }
-    }
+    };
 
     const listAllCommands = () => {
         let response = "";
         knownCommands.forEach(command => {
-            response += command + ", ";
+            if (command === "help") {
+                response += "(" + command + "), ";
+            } else {
+                response += command + ", ";
+            }
         });
         return response.substring(0, response.length - 2);
-    }
+    };
+
+    const getAge = () => 
+         moment().diff("1999-10-13", "years");
+    
 </script>
 
 <div class="game-container">

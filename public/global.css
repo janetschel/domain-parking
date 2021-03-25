@@ -118,10 +118,11 @@ div.game-container > input {
 div.game-container > div.history {
 	position: relative;
 	bottom: 50px;
-	width: calc(100% - 10px);
+	width: calc(100% - 20px);
 	height: 50px;
 	overflow: scroll;
 	margin-left: 10px;
+	margin-right: 10px;
 }
 
 div.game-container > div.history > span.code { 
@@ -130,6 +131,11 @@ div.game-container > div.history > span.code {
 }
 
 div.game-container > div.history > span.response { 
+	font-family: 'Source Code Pro', monospace !important;
+	color: white
+}
+
+div.game-container > div.history > span.response > a { 
 	font-family: 'Source Code Pro', monospace !important;
 	color: white
 }
