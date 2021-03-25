@@ -100,7 +100,7 @@
     };
 </script>
 
-<div class="game-container">
+<div class="prompt-container">
     <div class="history" id="history"></div>
     <span class="carret invisible" id="carret">&gt;</span>
     <input type="text" id="input-field" class="invisible" placeholder="~" on:keydown={keyDownInput}>

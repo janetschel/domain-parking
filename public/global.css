@@ -85,7 +85,7 @@ div.footer-wrapper > span.footer, div.footer-wrapper > span.footer > a {
 	opacity: 0;
 }
 
-div.game-container {
+div.prompt-container {
 	position: absolute;
 	width: 100vw;
 	height: 50px;
@@ -94,7 +94,7 @@ div.game-container {
 	font-size: 20px;
 }
 
-div.game-container > span.carret {
+div.prompt-container > span.carret {
 	position: absolute;
 	margin: 10px;
 	margin-bottom: 11px;
@@ -103,7 +103,7 @@ div.game-container > span.carret {
 	color: rgb(13, 208, 13);
 }
 
-div.game-container > input {
+div.prompt-container > input {
 	position: absolute;
 	margin-left: 30px;
 	bottom: 0;
@@ -115,7 +115,7 @@ div.game-container > input {
 	font-size: 20px;
 }
 
-div.game-container > div.history {
+div.prompt-container > div.history {
 	position: relative;
 	bottom: 50px;
 	width: calc(100% - 20px);
@@ -125,17 +125,17 @@ div.game-container > div.history {
 	margin-right: 10px;
 }
 
-div.game-container > div.history > span.code { 
+div.prompt-container > div.history > span.code { 
 	font-family: 'Source Code Pro', monospace !important;
 	color: lightgray
 }
 
-div.game-container > div.history > span.response { 
+div.prompt-container > div.history > span.response { 
 	font-family: 'Source Code Pro', monospace !important;
 	color: white
 }
 
-div.game-container > div.history > span.response > a { 
+div.prompt-container > div.history > span.response > a { 
 	font-family: 'Source Code Pro', monospace !important;
 	color: white
 }
@@ -149,14 +149,14 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active
 {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	outline: none;
+ -webkit-box-shadow: none;
+ box-shadow: none;
+ outline: none;
 }
 
 input:hover, 
 input:focus, 
 input:active
 {
-	outline: none;
+ outline: none;
 }
