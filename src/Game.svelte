@@ -11,6 +11,7 @@
         "contact",
         "exit",
         "help",
+        "home",
         "reload",
         "visit",
     ];
@@ -84,6 +85,11 @@
                     return "Hi! I'm Jan, "+ getAge() +" years old. I study computer science at <a target=\"_blank\" href=\"https://www.th-nuernberg.de/en/\">TH Nuremberg</a> (Bavaria, Germany) and work for a German insurance company. I love to freelance in my freetime!";
                 case "contact":
                     return "Contact me at <a href=\"mailto:email@janetschel.de\">mailto:email@janetschel.de</a> or at my website"
+                case "home":
+                    window.open("https://janetschel.dev?from=404", "_self");
+                    return "";
+                default:
+                    return "No implementation for known command yet... Please refer to administrator."
             }
         } else {
             if (command.includes("visit")) {
