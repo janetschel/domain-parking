@@ -17,12 +17,17 @@
         })
     };
 
-    const fadeElementsOut = () => {
-        document.querySelectorAll("h1, h2, h3, span, a").forEach(element => {
-            if (element.classList.contains("carret"))
-                return;
+    const fadeElementsOut = async () => {
+        const elements = document.querySelectorAll("h1, h2, h3, span, a");
+        elements.forEach(element => {
+            if (!element.classList.contains("carret"))
+                element.classList.add("scaled")
+        });
 
-            element.classList.add("scaled")
+        await Util.sleep(1100); // need to wait until fade-out animation is done
+        elements.forEach(element => {
+            if (!element.classList.contains("carret"))
+                element.classList.add("invisible")
         });
     };
 
@@ -84,7 +89,7 @@
                 default:
                     return "No implementation for known command yet... Please refer to administrator."
             }
-        } else if (command.includes("visit")) {
+        } else if (command.includes("visit")) { // visit command needs extra care since it has arguments that need to be parsed
             if (Util.countChar(command, " ") != 1) {
                 return "Usage for visit: visit &lt;url&gt;"
             } else {

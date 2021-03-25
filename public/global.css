@@ -141,7 +141,7 @@ div.game-container > div.history > span.response > a {
 }
 
 .invisible {
-	display: none;
+	display: none !important;
 }
 
 input:-webkit-autofill,
@@ -149,14 +149,14 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active
 {
- -webkit-box-shadow: none;
- box-shadow: none;
- outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
 }
 
 input:hover, 
 input:focus, 
 input:active
 {
- outline: none;
+	outline: none;
 }
