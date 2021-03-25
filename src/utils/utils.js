@@ -3,28 +3,25 @@ const shuffle = (array) => {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
-    return array;
-}
 
-const sleep = async (time) => {
-    await new Promise(r => setTimeout(r, time));
-}
+    return array;
+};
+
+const sleep = async (time) => await new Promise(r => setTimeout(r, time));
 
 const countChar = (text, char) => {
     let num = 0;
-    for (let i = 0; i < text.length; i++) {
-        if (text[i] === char) {
-            num++;
-        }  
-    }
+
+    for (let i = 0; i < text.length; i++)
+        num += text[i] === char ? 1 : 0;
 
     return num;
-}
+};
 
-const Util = {
+const Utils = {
     shuffle,
     sleep,
     countChar,
-}
+};
 
-export default Util;
+export default Utils;
