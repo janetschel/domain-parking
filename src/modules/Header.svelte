@@ -1,4 +1,5 @@
 <script>
+    import "../styles/Header.css"
     import Domain from "./Domain.svelte";
     export let domains, index;
 </script>

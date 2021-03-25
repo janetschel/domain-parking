@@ -1,4 +1,5 @@
 <script>
+    import "../styles/Prompt.css"
     import Util from '../utils/utils.js';
     const knownCommands = ["about", "clear", "contact", "exit" ,"help", "home", "reload", "visit"];
 

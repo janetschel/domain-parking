@@ -1,0 +1,13 @@
+div.footer-wrapper {
+	bottom: 0;
+	margin-top: 50px;
+	text-align: center;
+}
+
+div.footer-wrapper > span.footer {
+	display: inline-block;
+}
+
+div.footer-wrapper > span.footer, div.footer-wrapper > span.footer > a {
+	color: rgba(255, 255, 255, 0.5)
+}
