@@ -1,9 +1,8 @@
 <script>
-	import Footer from "./Footer.svelte";
-	import Header from "./Header.svelte";
-import Minigame from "./Game.svelte";
+	import Footer from "./modules/Footer.svelte";
+	import Header from "./modules/Header.svelte";
+	import Prompt from "./modules/Prompt.svelte";
 
-	// Domains that are currently parked and redirect to this website
 	const domains = [
 		"janetschel.de",
 		"janetschel.com",
@@ -14,10 +13,10 @@ import Minigame from "./Game.svelte";
 		"testapps.de",
 		"verbindungs-optimierer.de",
 	]
-
-	let index = 0;
 </script>
 
-<Header domains={domains} index={index} />
-<Minigame />
-<Footer />
+<div class="content">
+	<Header domains={domains} index={0} />
+	<Prompt />
+	<Footer />
+</div>

@@ -1,15 +1,13 @@
 <script>
-    import Domains from "./Domain.svelte";
-
-    export let domains;
-    export let index;
+    import Domain from "./Domain.svelte";
+    export let domains, index;
 </script>
 
 <div class="container">
     <div class="text-content">
         <h1 class="error-message">404</h1>
         <h1 class="question">Did you visit</h1> 
-        <Domains domains={domains} index={index}/>
+        <Domain domains={domains} index={index}/>
         <h1 class="question-mark">?</h1>
     </div>
     <div class="nothing-to-see">

@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -18,10 +20,13 @@ const countChar = (text, char) => {
     return num;
 };
 
-const Utils = {
+const calculateCurrentAge = () => moment().diff("1999-10-13", "years");
+
+const Util = {
     shuffle,
     sleep,
     countChar,
+    calculateCurrentAge,
 };
 
-export default Utils;
+export default Util;
