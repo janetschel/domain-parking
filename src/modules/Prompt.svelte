@@ -8,7 +8,11 @@
 
     document.body.onkeydown = () => {
         document.addEventListener('keydown', event => {
-            if (!promptShown && event.code === 'Space') {
+            const isOnMobile = 
+                /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+                .test(navigator.userAgent);
+            
+            if (!isOnMobile && !promptShown && event.code === 'Space') {
                 promptShown = true;
                 fadeElementsOut();
 
