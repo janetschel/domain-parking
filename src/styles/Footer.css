@@ -3,7 +3,7 @@ div.footer-wrapper {
 	height: fit-content;
 }
 
-div.footer-wrapper > *{
+div.footer-wrapper > * {
 	display: inline-block;
 }
 
