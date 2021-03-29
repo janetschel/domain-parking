@@ -1,5 +1,6 @@
 <script>
     import "../styles/Footer.css"
+    import "../styles/media-queries/Footer.css"
 </script>
 
 <div class="footer-wrapper">

@@ -1,0 +1,76 @@
+@media screen and (max-width: 610px) {
+    div.header {
+        grid-template-rows: 260px 40px;
+        gap: 0;
+    }
+
+    div.header > div.catch-phrase > div.domain-shuffle > h1 {
+        font-size: 36px;
+    }
+
+    div.header > div.nothing-to-see {
+        height: fit-content;
+        align-self: center;
+    }
+    
+    div.header > div.nothing-to-see > h2 {
+        margin: 0;
+    }
+
+    div.header > div.nothing-to-see > h3 {
+        display: none;
+    }
+  }
+
+@media screen and (max-width: 499px) {
+    div.header {
+        grid-template-rows: 500px;
+    }
+
+    div.header > div.nothing-to-see > h2 {
+        display: none;
+    }
+
+    div.header > div.catch-phrase {
+        grid-template-rows: 200px 360px;
+    }
+
+    div.header > div.catch-phrase > h1.error-message {
+        font-size: 200px;
+    }
+
+    div.header > div.catch-phrase > div.domain-shuffle {
+        width: 100%;
+        text-align: center;
+    }
+
+    div.header > div.catch-phrase > div.domain-shuffle > h1 {
+        font-size: 48px;
+        display: block;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    div.header {
+        grid-template-rows: 100vh;
+    }
+
+    div.header > div.catch-phrase {
+        grid-template-rows: 100vh;
+    }
+
+    div.header > div.catch-phrase > div.domain-shuffle {
+        display: none;
+    }
+
+    div.header > div.catch-phrase > h1.error-message {
+        font-size: 148px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    div.header > div.catch-phrase > h1.error-message {
+        font-size: 100px;
+    }
+}
