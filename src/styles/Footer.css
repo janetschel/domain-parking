@@ -1,10 +1,9 @@
 div.footer-wrapper {
-	bottom: 0;
-	margin-top: 50px;
-	text-align: center;
+	grid-area: footer;
+	height: fit-content;
 }
 
-div.footer-wrapper > span.footer {
+div.footer-wrapper > *{
 	display: inline-block;
 }
 

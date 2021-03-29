@@ -1,64 +1,53 @@
 div.prompt-container {
-	position: absolute;
-	width: 100vw;
-	height: 50px;
-	margin-top: 75px;
-	bottom: 0;
+	grid-area: prompt;
+	align-self: end;
+	justify-self: center;
+
+	width: 98vw;
+	height: fit-content;
+	margin: 10px;
+}
+
+div.prompt-container > span, div.prompt-container > div.history > span, div.prompt-container > div.history > span > a {
+	font-family: 'Source Code Pro', monospace;
+	color: white;
 	font-size: 20px;
 }
 
 div.prompt-container > span.carret {
-	position: absolute;
-	margin: 10px;
-	margin-bottom: 11px;
-	bottom: 0;
-	font-family: 'Source Code Pro', monospace !important;
 	color: rgb(13, 208, 13);
 }
 
 div.prompt-container > input {
-	position: absolute;
-	margin-left: 30px;
-	bottom: 0;
-	font-family: 'Source Code Pro', monospace !important;
-	background-color: transparent;
-	height: 50px;
-	width: 500px;
-	border: none;
+	font-family: 'Source Code Pro', monospace;
 	font-size: 20px;
+
+	background-color: transparent;
+	width: calc(100% - 30px);
+	height: 50px;
+	border: none;
 }
 
 div.prompt-container > div.history {
-	position: relative;
-	bottom: 50px;
 	width: calc(100% - 20px);
-	height: 50px;
 	overflow: scroll;
-	margin-left: 10px;
-	margin-right: 10px;
+	height: 50px;
 }
 
 div.prompt-container > div.history > span.code { 
-	font-family: 'Source Code Pro', monospace !important;
 	color: lightgray
 }
 
-div.prompt-container > div.history > span.response { 
-	font-family: 'Source Code Pro', monospace !important;
-	color: white
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
 }
 
-div.prompt-container > div.history > span.response > a { 
-	font-family: 'Source Code Pro', monospace !important;
-	color: white
+input:hover, input:focus, input:active {
+	outline: none;
 }
 
-input:-webkit-autofill, input:-webkit-autofill:hover,  input:-webkit-autofill:focus, input:-webkit-autofill:active {
- -webkit-box-shadow: none;
- box-shadow: none;
- outline: none;
-}
-
-input:hover,  input:focus,  input:active {
- outline: none;
+::-webkit-scrollbar {
+	display: none;
 }

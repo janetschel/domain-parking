@@ -20,6 +20,7 @@
 
     const fadeElementsOut = async () => {
         const elements = document.querySelectorAll("h1, h2, h3, span, a");
+        console.log(elements);
         elements.forEach(element => {
             if (!element.classList.contains("carret"))
                 element.classList.add("scaled")
