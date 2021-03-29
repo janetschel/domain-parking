@@ -1,6 +1,6 @@
 <script>
-    import "./styles/App.css"
-    import "./styles/media-queries/App.css"
+    import "./styles/App.css";
+    import "./styles/media-queries/App.css";
 
 	import Footer from "./modules/Footer.svelte";
 	import Header from "./modules/Header.svelte";

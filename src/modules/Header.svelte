@@ -1,6 +1,6 @@
 <script>
-    import "../styles/Header.css"
-    import "../styles/media-queries/Header.css"
+    import "../styles/Header.css";
+    import "../styles/media-queries/Header.css";
 
     import Domain from "./Domain.svelte";
     export let domains, index;
