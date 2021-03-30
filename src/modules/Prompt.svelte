@@ -1,5 +1,6 @@
 <script>
-    import "../styles/Prompt.css"
+    import "../styles/Prompt.css";
+    
     import Util from '../utils/utils.js';
     const knownCommands = ["about", "clear", "contact", "exit" ,"help", "home", "reload", "visit"];
 
@@ -8,7 +9,11 @@
 
     document.body.onkeydown = () => {
         document.addEventListener('keydown', event => {
-            if (!promptShown && event.code === 'Space') {
+            const isOnMobile = 
+                /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+                .test(navigator.userAgent);
+            
+            if (!isOnMobile && !promptShown && event.code === 'Space') {
                 promptShown = true;
                 fadeElementsOut();
 
@@ -20,6 +25,7 @@
 
     const fadeElementsOut = async () => {
         const elements = document.querySelectorAll("h1, h2, h3, span, a");
+        console.log(elements);
         elements.forEach(element => {
             if (!element.classList.contains("carret"))
                 element.classList.add("scaled")

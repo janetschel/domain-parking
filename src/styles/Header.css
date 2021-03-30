@@ -1,50 +1,65 @@
-div.container {
-	width: 100%;
-	text-align: center;
+div.header {
+    grid-area: content;
+    width: 100vw;
+
+    display: grid;
+    grid-template-areas: 
+        "catch-phrase"
+        "more-info";
+
+    grid-template-rows: 260px 110px;
+    gap: 20px;
 }
 
-div.container > div.text-content {
-	display: inline-block;
-	white-space: nowrap;
+div.header > div.catch-phrase {
+    grid-area: catch-phrase;
+    width: 100vw;
+
+    display: grid;
+    grid-template-areas: 
+        "error-message"
+        "domain";
+
+    grid-template-rows: 200px 60px;
+
+    align-items: center;
+    justify-items: center;
 }
 
-div.container > div.text-content > h1 {
-	display: inline-block;
-	font-size: 48px;
+div.header > div.catch-phrase > h1.error-message {
+    font-size: 128px;
+    grid-area: error-message;
 }
 
-div.container > div.text-content > h1.error-message {
-	display: block;
-	font-size: 128px;
-	margin-bottom: 30px;
+div.header > div.catch-phrase > div.domain-shuffle {
+    grid-area: domain;
 }
 
-div.container > div.text-content > h1.question {
-	margin-right: 5px;
+div.header > div.catch-phrase > div.domain-shuffle > h1 {
+    display: inline-block;
+    font-size: 48px;
 }
 
-div.container > div.text-content > h1.domain {
-	color: rgba(255, 255, 255, 1);
+div.header > div.catch-phrase > div.domain-shuffle > h1 {
+    margin-left: 5px;
 }
 
-div.container > div.text-content > h1.domain:hover {
+div.header > div.catch-phrase > div.domain-shuffle > h1.domain:hover {
 	text-decoration: line-through;
 	cursor: pointer;
 	color: rgba(255, 255, 255, 0.5);
 }
 
-div.container > div.nothing-to-see {
-	width: 100%;
-	height: 100px;
-
-	margin-top: 20px;
+div.header > div.nothing-to-see {
+    grid-area: more-info;
+    text-align: center;
 }
 
-div.container > div.nothing-to-see > h2 {
-	font-size: 30px;
-	margin-bottom: 15px;
+div.header > div.nothing-to-see > h2 {
+    font-size: 30px;
+    margin-bottom: 1rem;
 }
 
-div.container > div.nothing-to-see > h3 {
-	margin-bottom: 5px;
+div.header > div.nothing-to-see > h3 {
+    margin-bottom: 5px;
 }

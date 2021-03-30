@@ -1,15 +1,19 @@
 <script>
-    import "../styles/Header.css"
+    import "../styles/Header.css";
+    import "../styles/media-queries/Header.css";
+
     import Domain from "./Domain.svelte";
     export let domains, index;
 </script>
 
-<div class="container">
-    <div class="text-content">
+<div class="header">
+    <div class="catch-phrase">
         <h1 class="error-message">404</h1>
-        <h1 class="question">Did you visit</h1> 
-        <Domain domains={domains} index={index}/>
-        <h1 class="question-mark">?</h1>
+        <div class="domain-shuffle">
+            <h1 class="question">Did you visit</h1> 
+            <Domain domains={domains} index={index}/>
+            <h1 class="question-mark">?</h1>
+        </div>
     </div>
     <div class="nothing-to-see">
         <h2>Well, nothing to see here...</h2>

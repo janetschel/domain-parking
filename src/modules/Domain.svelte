@@ -1,5 +1,5 @@
 <script>
-    import Util from "../utils/utils.js"
+    import Util from "../utils/utils.js";
 
     export let domains, index;
     domains = Util.shuffle(domains);

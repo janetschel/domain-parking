@@ -1,0 +1,15 @@
+div.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+
+    grid-template-columns: 100vw;
+    grid-template-rows: 390px 20px;
+    grid-template-areas: 
+        "content"
+        "footer"
+        "prompt";
+
+    justify-items: center;
+    gap: 4rem;
+}

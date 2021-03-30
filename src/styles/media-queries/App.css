@@ -1,0 +1,17 @@
+@media screen and (max-width: 610px) {
+    div.wrapper {
+        grid-template-rows: 300px 20px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    div.wrapper {
+        grid-template-rows: 500px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    div.wrapper {
+        grid-template-rows: 50vh;
+    }
+}

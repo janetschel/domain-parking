@@ -1,4 +1,7 @@
 <script>
+    import "./styles/App.css";
+    import "./styles/media-queries/App.css";
+
 	import Footer from "./modules/Footer.svelte";
 	import Header from "./modules/Header.svelte";
 	import Prompt from "./modules/Prompt.svelte";
@@ -12,8 +15,8 @@
 	]
 </script>
 
-<div class="content">
+<div class="wrapper">
 	<Header domains={domains} index={0} />
-	<Prompt />
 	<Footer />
+	<Prompt />
 </div>
