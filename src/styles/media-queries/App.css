@@ -12,6 +12,6 @@
 
 @media screen and (max-width: 385px) {
     div.wrapper {
-        grid-template-rows: 100vh;
+        grid-template-rows: 50vh;
     }
 }
